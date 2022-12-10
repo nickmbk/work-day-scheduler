@@ -5,14 +5,20 @@ $("#currentDay").append(getDay);
 // hour colors
 var hourNow = moment().hour();
 
-for (var i = 9; i < 18; i++) {
-    $("textarea").each(function() {
-        if (i < hourNow) {
-            $("textarea").addClass("past");
-        } else if (i === hourNow) {
-            $("textarea").addClass("present");
-        } else if (i > hourNow) {
-            $("textarea").addClass("future");
-        }
-    })
-}
+$(".row").each(function() {
+    console.log(this);
+    rowHour = $(this).data("hour")
+    console.log(rowHour);
+    if (rowHour < hourNow) {
+        $("textarea[data-hour=" + rowHour + "]").addClass("past");
+        console.log("added past");
+    }
+    if (rowHour === hourNow) {
+        $("textarea[data-hour=" + rowHour + "]").addClass("present");
+        console.log("added present");
+    }
+    if (rowHour > hourNow) {
+        $("textarea[data-hour=" + rowHour + "]").addClass("future");
+        console.log("added future");
+    }
+});
