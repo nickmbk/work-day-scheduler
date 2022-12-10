@@ -12,6 +12,7 @@ textarea {
   border-left: 1px solid black;
   padding: 10px;
   height: 100%;
+  width: 100%;
   
 }
 
@@ -42,10 +43,16 @@ textarea {
   border-top: 1px solid white;
 }
 
-.hour {
+td.hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  width: 10%;
+  text-align: left;
+}
+
+td.task {
+  width:80%;
 }
 
 .past {
@@ -69,13 +76,28 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  width: 7%;
+  vertical-align: middle;
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+  color: navy;
 }
 
 td:nth-child(2) {
   padding: 0;
+}
+
+@media (min-width: 700px) {
+  td.hour {
+    padding-left: 2%;
+  }
+}
+
+@media (min-width: 1000px) {
+  td.hour {
+    padding-left: 5%;
+  }
 }
