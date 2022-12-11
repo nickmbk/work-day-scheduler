@@ -24,21 +24,29 @@ $(".row").each(function() {
 });
 
 function savePlanner (event) {
-    var timeBlock = $(this).data("hour");
-    var activity = $("textarea[data-hour=" + timeBlock + "]").val();
-
+    var timeBlock = 0;
+    var activity = "";
+    timeBlock = $(this).data("hour");
+    activity = $("textarea[data-hour=" + timeBlock + "]").val();
+    activity.trim();
     plannerString = localStorage.getItem("planner");
     plannerItems = JSON.parse(plannerString) ?? [];
-    // https://bobbyhadz.com/blog/javascript-array-find-index-of-object-by-property
-    var checkTimeExists = plannerItems.map(object => object.timeBlock).indexOf(timeBlock);
-    console.log(checkTimeExists);
-    if (checkTimeExists !== -1) {
+    if (activity !== "") {
+        // https://bobbyhadz.com/blog/javascript-array-find-index-of-object-by-property
+        var checkTimeExists = plannerItems.map(object => object.timeBlock).indexOf(timeBlock);
+        if (checkTimeExists !== -1) {
+            plannerItems.splice(checkTimeExists, 1);
+        }
+        var newTask = { timeBlock, activity };
+        plannerItems.push(newTask);
+        plannerItems.sort((a, b) => a.timeBlock - b.timeBlock);
+        localStorage.setItem("planner", JSON.stringify(plannerItems));
+    } else {
+        var checkTimeExists = plannerItems.map(object => object.timeBlock).indexOf(timeBlock);
+        console.log(checkTimeExists);
         plannerItems.splice(checkTimeExists, 1);
+        localStorage.setItem("planner", JSON.stringify(plannerItems));
     }
-    var newTask = { timeBlock, activity };
-    plannerItems.push(newTask);
-    plannerItems.sort((a, b) => a.timeBlock - b.timeBlock);
-    localStorage.setItem("planner", JSON.stringify(plannerItems));
 }
 
 var plannerString = localStorage.getItem("planner");
