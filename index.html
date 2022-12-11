@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- link for bootstrap -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <!-- script for fontawesome -->
     <script src="https://kit.fontawesome.com/3ba170ced9.js" crossorigin="anonymous"></script>
+    <!-- link for google fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <!-- link for custom css -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -26,6 +29,7 @@
     </header>
     <div class="container">
       <table class="table">
+        <!-- data-hur attribute used in the JavaScript file to find and refer to particular table rows and cells -->
         <tr class="row time-block" data-hour="9">
           <td class="hour">9AM</td>
           <td class="task"><textarea data-hour="9"></textarea></td>
@@ -74,9 +78,10 @@
         </tr>
       </table>
     </div>
-
+    <!-- script file for jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- script for moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

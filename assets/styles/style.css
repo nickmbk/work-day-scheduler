@@ -56,16 +56,19 @@ td.task {
   width:80%;
 }
 
+/* for coloring the textareas in the past */
 .past {
   background-color: #d3d3d3;
   color: black;
 }
 
+/* for coloring the textareas in the present */
 .present {
   background-color: #ff6961;
   color: black;
 }
 
+/* for coloring the textareas in the future */
 .future {
   background-color: #77dd77;
   color: black;
@@ -87,10 +90,12 @@ td.task {
   color: navy;
 }
 
+/* to take the padding off of the second table cell of every row so the textarea fills the cell*/
 td:nth-child(2) {
   padding: 0;
 }
 
+/* media queries to increase padding of the first column */
 @media (min-width: 700px) {
   td.hour {
     padding-left: 2%;
