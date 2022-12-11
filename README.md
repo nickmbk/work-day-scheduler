@@ -38,6 +38,8 @@ To log an activity or task, simply click in the center box of the hour you wish 
 
 To remove a task, click into the relevant box and delete the text and click the save icon again.
 
+![Work Day Scheduler Screenshot](./assets/images/work-day-scheduler-screenshot.png)
+
 ## Credits
 
 Resources used in this project were:
