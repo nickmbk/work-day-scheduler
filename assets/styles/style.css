@@ -74,14 +74,14 @@ td.task {
   color: black;
 }
 
-.saveBtn {
+td.saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
   width: 7%;
-  vertical-align: middle;
+  padding-top: 32px;
 }
 
 .saveBtn i:hover {
